@@ -1,44 +1,82 @@
-import { useState } from "react";
 import "./App.css";
-import About from "./About";
 
 function App() {
-  const [count, setCount] = useState(0);
+  return (
+    <>
+      <header className="top-nav">
+        <div className="nav-brand">Prameswara</div>
+        <nav className="nav-links">
+          <a href="#home">Home</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </header>
 
-return (
-  <>
-      <About />
-      <section id="projects">
-      <h2>Projects</h2>
+      <main>
+        <section id="home" className="hero">
 
-      </section>
-      <nav>
-        <a href="#home">Home</a>
-        <a href="#projects">Projects</a>
-        <a href="#playground">Playground</a>
-      </nav>
+          <div className="hero-bg"></div>
 
-      <section id="home">
-        <h1>Home</h1>
-        <p>Welcome to my portfolio.</p>
-      </section>
-      
-      <section id="projects">
-        <h2>Projects</h2>
-        <p>Project cards will go here.</p>
-      </section>
+          <div className="hero-content">
 
-      <section id="playground">
-        <h2>Playground</h2>
+            <div className="divider"></div>
 
-        <p className="count">{count}</p>
+            <div className="avatar">
+              <img src="./profile.jpg" alt="Profile" />
+            </div>
 
-        <div className="row">
-          <button onClick={() => setCount(count - 1)}>-</button>
-          <button onClick={() => setCount(0)}>Reset</button>
-          <button onClick={() => setCount(count + 1)}>+</button>
-        </div>
-      </section>
+            <div className="hero-text-grid">
+              <div className="left">
+                <h1>Hi, I’m Prameswara.</h1>
+                <p>
+                  Student developer into software engineering, game design,
+                  and interactive systems. I like figuring out how things connect.
+                </p>
+              </div>
+
+              <div className="right">
+                <h2>Contact</h2>
+                <p>This site documents what I’m building and learning over time.</p>
+
+                <div className="links">
+                  <a href="#projects">Projects</a>
+                  <a href="#contact">Contact</a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <section id="projects" className="section">
+          <h2 className="section-title">Projects</h2>
+          <div className="cards">
+            <div className="card">
+              <h3>Project 1</h3>
+              <p>Short description goes here.</p>
+            </div>
+            <div className="card">
+              <h3>Project 2</h3>
+              <p>Short description goes here.</p>
+            </div>
+            <div className="card">
+              <h3>Project 3</h3>
+              <p>Short description goes here.</p>
+            </div>
+          </div>
+        </section>
+        
+        <section id="contact" className="section">
+          <h2 className="section-title">Contact</h2>
+          <p className="section-text">Put your email and socials here.</p>
+
+          <div className="contact-box">
+            <a href="mailto:u1558647@umail.utah.edu">u1558647@umail.utah.edu</a>
+            <a href="https://github.com/thebambeh" target="_blank" rel="noreferrer">GitHub</a>
+            <a href="https://www.linkedin.com/in/prameswara-wardhana/" target="_blank" rel="noreferrer">LinkedIn</a>
+          </div>
+        </section>
+      </main>
     </>
   );
 }
